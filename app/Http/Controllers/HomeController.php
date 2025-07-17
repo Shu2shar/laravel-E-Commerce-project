@@ -31,7 +31,7 @@ class HomeController extends Controller
     {
         $requestData = $request->all();
         // dd($requestData);
-        //$brands = Brands::select('id', 'name')->get();
+        // $brands = Brands::select('id', 'name')->get();
         $brands = Brands::pluck('name', 'id');
         $products = Product::query();
         if (isset($requestData['gender']) && !empty($requestData['gender'])) {
